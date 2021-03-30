@@ -1,0 +1,37 @@
+package com.company;
+class Maruti {
+    Maruti(){
+        System.out.println("This is my maruti class constructor");
+    }
+        Maruti(int x){
+            System.out.println("this is a overloaded constructor in maruti class:" + x);
+        }
+    }
+    class Suzuki extends Maruti{
+        Suzuki() {
+
+            System.out.println("This is my suzuki class constructor");
+        }
+        Suzuki(int x, int y){
+            super(x);
+            System.out.println("This is a overloaded constructor in Suzuki class:" + y);
+        }
+    }
+     class Honda extends Suzuki{
+      Honda(){
+          System.out.println("This is my honda class constructor");
+      }
+      Honda(int x, int y, int z){
+          super(x,y);
+          System.out.println("This is a overloaded constructor in Honda class:" + z);
+      }
+     }
+public class Tesla {
+    public static void main(String[] args) {
+
+       // Maruti M = new Maruti();
+       // Suzuki S = new Suzuki(4);
+        Honda H = new Honda(2, 3, 4);
+
+    }
+}
